@@ -29,7 +29,7 @@ else if(!navMenu.classList.contains("open-menu")){
 
 searchBtn.addEventListener("click",function(){
     searchBtn.style.display="none";
-    searchInput.style.display="block";
+    searchInput.style.display="flex";
     setTimeout(function(){
         searchInput.classList.add("open-search");
     },10);
