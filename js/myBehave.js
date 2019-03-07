@@ -36,3 +36,16 @@ searchBtn.addEventListener("click",function(){
     searchInput.focus();
 });
 
+
+
+navMenu.addEventListener("click",function(){
+    if(navMenu.classList.contains("open-menu")){
+        bar[0].classList.remove("top-bar");
+        bar[1].classList.remove("middle-bar");
+        bar[2].classList.remove("bottom-bar");
+        navMenu.classList.remove("open-menu");
+        setTimeout(function(){
+            navMenu.style.display="none";
+        },700);
+    }
+});

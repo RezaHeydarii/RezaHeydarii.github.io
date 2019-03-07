@@ -79,19 +79,16 @@ http://www.tooplate.com/view/2085-neuron
 /*---------------------------------------
     Main Navigation             
 -----------------------------------------*/
-.mynav{
-  position: fixed;
-  z-index: 50;
-  margin-top:3rem; 
- 
-}
+
 .nav-menu{
-  display: block;
+  position: fixed;
+  z-index: 19;
+  width: 100%;
+  display: none;
   opacity: 0;
-  padding: 2rem;
-  background: linear-gradient(to bottom,transparent,rgba(128, 128, 128, 0.6),rgba(128, 128, 128, 0.5),rgba(128, 128, 128, 0.4),rgba(128, 128, 128, 0), transparent);
+  padding: 4rem 2rem 0 2rem;
+  background: linear-gradient(to right,rgba(14, 13, 13, 1),rgba(26, 26, 26, 0.8),rgba(43, 42, 42, 0.7),rgba(36, 36, 36, .5), transparent 90%);
   transition: opacity .5s;
-  border-radius: 8px;
   border: none;
   height: 100vh;
 }
@@ -105,15 +102,18 @@ http://www.tooplate.com/view/2085-neuron
 .nav-item a{
   text-decoration: none;
   color: rgb(132, 139, 139);
-  font-size: 2rem;
+  font-size: 4rem;
 }
 
 .nav-item a:hover{
   color: rgb(250, 250, 250);
 }
 .hamberger-btn{
+  position: fixed;
   cursor: pointer;
   margin: 1rem;
+  z-index: 20;
+
 }
 .bar{
   opacity: 1;
@@ -237,8 +237,8 @@ Site Cover
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
 @import url("https://fonts.googleapis.com/css?family=Oswald");
 /*media queries*/
-.timeline-container{
-  border:20px solid rgb(79, 214, 91);
+#timeline-container{
+  border:5px solid rgb(79, 214, 91);
   border-radius:4px;
   width: 100%;
   justify-self: center;
@@ -322,9 +322,9 @@ Site Cover
   left: -4.5em;
 }
 @media (min-width:1000px){
-  .timeline-container{
+  #timeline-container{
     margin: 8.8rem auto;
-    width: 80%;
+    width: 90%;
   }
 }
 @supports (display: grid) {
