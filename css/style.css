@@ -252,6 +252,30 @@ transform: rotateZ(220deg) translateY(-10px);
   opacity: 0;
 }
 
+
+/*---------------------------------------
+Site Cover 
+-----------------------------------------*/
+.site-cover{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+.site-cover video{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(30%);
+}
+.cover-ui{
+  display: flex;
+  justify-content:
+  center;align-items: center;
+  width: 100%;
+  height: 100vh;
+}
 #search-input{
   display: none;
   opacity: 0;
@@ -297,60 +321,7 @@ transform: rotateZ(220deg) translateY(-10px);
   }
 }
 
-/*---------------------------------------
-    Home section              
------------------------------------------*/
-
-#home {
-    background-size: cover;
-    background-position: center center;
-    color: #ffffff;
-    display: -webkit-box;
-    display: -webkit-flex;
-     display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-     align-items: center;
-    position: relative;
-    text-align: center;
-}
-
-.main-home {
-  background: url('../images/home-bg.jpg') no-repeat;
-  height: 100vh;
-}
-
-.main-about {
-  background: url('../images/about-bg.jpg') no-repeat;
-}
-
-.main-single-post {
-  background: url('../images/single-post-bg.jpg') no-repeat;
-}
-
-.main-gallery {
-  background: url('../images/gallery-bg.jpg') no-repeat;
-}
-
-.main-contact {
-  background: url('../images/contact-bg.jpg') no-repeat;
-}
-
-#particles-js {
-  position: absolute;
-  width: 100%;
-  height: 100vh;
-  top: 0;
-  left: 0;
-}
-
-#home h4 {
-  color: #bfba55;
-}
-
-#home .btn {
+.cover-ui .btn {
   background: #ffffff;
   border: 2px solid #ffffff;
   border-radius: 100px;
@@ -365,14 +336,11 @@ transform: rotateZ(220deg) translateY(-10px);
   transition: all 0.4s ease-in-out;
 }
 
-#home .btn:hover {
+.cover-ui .btn:hover {
   background: transparent;
   border-color: #ffffff;
   color: #ffffff;
 }
-
-
-
 /*---------------------------------------
    About section              
 -----------------------------------------*/
