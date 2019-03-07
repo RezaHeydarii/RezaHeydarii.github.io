@@ -278,6 +278,7 @@ Site Cover
 }
 #search-input{
   display: none;
+  justify-content: space-between;
   opacity: 0;
   border-bottom:2px solid snow; 
   transition: opacity .5s,transform .5s;
@@ -289,8 +290,9 @@ Site Cover
 }
 #search-input input{
   border: none;
+  color: snow;
   background-color: transparent;
-  font-size: 8rem;
+  font-size: 4rem;
   text-align: right;
   width: 80%;
 }
