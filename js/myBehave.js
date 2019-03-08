@@ -80,4 +80,13 @@ snips.forEach(item=>{
         },
         offset:700
     }));
-})
+});
+
+var contactus=document.querySelector("#contact-container");
+var contactWaypoint=new Waypoint({
+    element:contactus,
+    handler:function(){
+        contactus.classList.add("showup-snip");
+    },
+    offset:500
+});
