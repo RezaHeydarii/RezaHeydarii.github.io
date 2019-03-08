@@ -49,7 +49,10 @@ navMenu.addEventListener("click",function(){
     }
 });
 
+/*------------------------------------------------------------
+    Waypoint settings 
 
+---------------------------------------------------------------*/
 var entries=document.querySelectorAll(".timeline--entry");
 var entWaypoints=[];
 
@@ -65,3 +68,16 @@ entries.forEach(item=>{
       }));
 });
 
+
+var snips=document.querySelectorAll("figure.snip1256");
+var snipWaypoints=[];
+
+snips.forEach(item=>{
+    snipWaypoints.push(new Waypoint({
+        element:item,
+        handler:function(direction){
+            item.classList.add("showup-snip");
+        },
+        offset:700
+    }));
+})
