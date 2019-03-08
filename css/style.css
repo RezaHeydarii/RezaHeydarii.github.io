@@ -279,7 +279,15 @@ Site Cover
 .timeline--entry {
   position: relative;
   background-color: var(--pallet-white--);
+  transform: scale(0);
+  transition: transform .5s;
 }
+
+.open-entry{
+  transform: scale(1);
+}
+
+
 .timeline--entry__title {
   color: var(--pallet-white--);
   background-color: var(--pallet-green--);

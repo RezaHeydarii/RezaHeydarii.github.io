@@ -48,3 +48,21 @@ navMenu.addEventListener("click",function(){
         },700);
     }
 });
+
+
+var entries=document.querySelectorAll(".timeline--entry");
+console.log(entries);
+var entWaypoints=[];
+
+entries.forEach(item=>{
+    console.log(item);
+    entWaypoints.push(new Waypoint({
+        element:item,
+        handler: function(direction) {
+            console.log("on the entri");
+            item.classList.add("open-entry");
+        },
+        offset: 700
+      }));
+});
+
