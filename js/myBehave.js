@@ -4,7 +4,6 @@ var searchBtn=document.querySelector("#search-btn");
 var searchInput=document.querySelector("#search-input");
 
 var navMenu =document.querySelector(".nav-menu");
-console.log(navMenu);
 btn.addEventListener("click",function(){
 if(navMenu.classList.contains("open-menu")){
     bar[0].classList.remove("top-bar");

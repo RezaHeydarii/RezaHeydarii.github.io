@@ -1,12 +1,13 @@
-/*
-
-Template 2085 Neuron
-
-http://www.tooplate.com/view/2085-neuron
-
-*/
-
-
+/*--------Color Pallete-------------
+green = #1AA97E
+black = #0A140B
+white = #EEE6E3
+-------------------------------------*/
+:root{
+  --pallet-green--:#1AA97E;
+  --pallet-black--:#0A140B;
+  --pallet-white--:#EEE6E3;
+}
 
 
 .btn-success:focus {
@@ -238,7 +239,7 @@ Site Cover
 @import url("https://fonts.googleapis.com/css?family=Oswald");
 /*media queries*/
 #timeline-container{
-  border:5px solid rgb(79, 214, 91);
+  border:5px solid var(--pallet-green--);
   border-radius:4px;
   width: 100%;
   justify-self: center;
@@ -252,10 +253,10 @@ Site Cover
 }
 
 .wrapper h1 {
-  color: rgb(71, 68, 68);
+  color: var(--pallet-black--);
   font-family: "Open Sans", "Lucida Grande", Tahoma, Verdana, Arial, sans-serif;
   text-align: center;
-  margin: 0 0 2rem 0;
+  margin: 0 0 2rem 0; 
 }
 .timeline {
   line-height: 1.5em;
@@ -268,7 +269,7 @@ Site Cover
   content: "";
   width: 10px;
   height: 100%;
-  background: #87ceeb;
+  background: var(--pallet-black--);
   position: absolute;
   top: 0;
   left: -3.313em;
@@ -277,11 +278,11 @@ Site Cover
 
 .timeline--entry {
   position: relative;
-  background-color: #eeeeee;
+  background-color: var(--pallet-white--);
 }
 .timeline--entry__title {
-  color: white;
-  background-color: #58eb84;
+  color: var(--pallet-white--);
+  background-color: var(--pallet-green--);
   font-family: "Oswald", Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: 300;
   font-size: 1rem;
@@ -296,24 +297,25 @@ Site Cover
   border-top: 10px solid transparent;
   border-bottom: 10px solid transparent;
   left: -1em;
-  border-right: 10px solid #ec407a;
+  border-right: 10px solid var(--pallet-green--);
 }
 .timeline--entry__detail {
-  background-color: #dddddd;
+  background-color: var(--pallet-black--);
+  color: var(--pallet-white--);
   padding: 1em;
   margin: 0;
 }
 .timeline--entry:before {
   content: "";
   font-family: "Oswald", Georgia, Cambria, "Times New Roman", Times, serif;
-  color: #ffffff;
+  color: var(--pallet-white--);
   display: flex;
   align-items: center;
   justify-content: center;
   width: 3em;
   height: 3em;
-  background-color: #87ceeb;
-  border: .2em solid white;
+  background-color: var(--pallet-green--);
+  border: .2em solid var(--pallet-green--);
   border-radius: 50%;
   position: absolute;
   counter-increment: section;
@@ -358,7 +360,7 @@ Site Cover
     }
     .timeline--entry:nth-of-type(even):not(:nth-of-type(odd)) .timeline--entry__title:before {
       left: 100%;
-      border-left: 10px solid #ec407a;
+      border-left: 10px solid var(--pallet-green--);
       border-right: 0;
     }
     .timeline--entry:nth-of-type(even):before {
@@ -424,13 +426,19 @@ Site Cover
   justify-items: center;
 }
 
-@media (min-width:40rem) and (max-width:60rem){
+@media (min-width:650px) and (max-width:850px){
+  .products-container{
+    grid-template-columns: repeat(2,auto);
+  }
+}
+
+@media (min-width:850px) and (max-width:1200px){
   .products-container{
     grid-template-columns: repeat(3,auto);
   }
 }
 
-@media (min-width:60rem){
+@media (min-width:1200px){
   .products-container{
     grid-template-columns: repeat(4,auto);
   }
