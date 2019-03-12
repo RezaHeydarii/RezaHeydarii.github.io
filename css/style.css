@@ -247,7 +247,6 @@ Site Cover
 @import url("https://fonts.googleapis.com/css?family=Oswald");
 /*media queries*/
 #timeline-container{
-  border:5px solid var(--pallet-green--);
   border-radius:4px;
   width: 100%;
   justify-self: center;
@@ -305,8 +304,9 @@ Site Cover
   background-color: var(--pallet-green--);
   font-family: "Oswald", Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: 300;
-  font-size: 1rem;
+  font-size: 1.8rem;
   padding: 1em;
+  direction: rtl;
 }
 .timeline--entry__title:before {
   content: "";
@@ -322,8 +322,10 @@ Site Cover
 .timeline--entry__detail {
   background-color: var(--pallet-black--);
   color: var(--pallet-white--);
+  font-size: 1.6rem;
   padding: 1em;
   margin: 0;
+  direction: rtl;
 }
 .timeline--entry:before {
   content: "";
@@ -448,26 +450,27 @@ Site Cover
 #products-container{
   display: grid;
   grid-template-columns: repeat(1,auto);
+  grid-column-gap: .4rem;
   justify-items: center;
   margin: 2rem;
 }
 
 @media (min-width:650px) and (max-width:850px){
   #products-container{
-    grid-template-columns: repeat(2,auto);
+    grid-template-columns: repeat(2,50%);
   }
 }
 
 @media (min-width:850px) and (max-width:1200px){
   #products-container{
-    grid-template-columns: repeat(3,auto);
+    grid-template-columns: repeat(2,50%);
   }
 }
 
 @media (min-width:1200px){
   #products-container{
-    grid-template-columns: repeat(4,auto);
-    margin: 10rem;
+    grid-template-columns: repeat(2,50%);
+    margin: 10rem .2rem;
   }
 }
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,500,800);
@@ -478,9 +481,7 @@ figure.snip1256 {
   position: relative;
   overflow: hidden;
   margin: 10px;
-  min-width: 220px;
-  max-width: 310px;
-  max-height: 220px;
+  max-height: 80vh;
   width: 100%;
   color: var(--pallet-white--);
   text-align: left;
@@ -491,6 +492,7 @@ figure.snip1256 {
   border-radius: 3rem;
   transform: translateY(8rem);
   transition: transform .5s,opacity .5s;
+
 }
 
 .showup-snip{
