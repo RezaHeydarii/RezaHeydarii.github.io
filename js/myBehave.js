@@ -49,6 +49,16 @@ navMenu.addEventListener("click",function(){
     }
 });
 
+var langbtns=document.querySelectorAll(".lang-btn");
+var langTogler =document.querySelector(".langs-togller");
+langTogler.addEventListener("click",function(){
+    console.log("langs clicked");
+    langbtns.forEach(item=>{
+       item.classList.toggle("open-langs");
+        
+    });
+})
+
 /*------------------------------------------------------------
     Waypoint settings 
 
@@ -57,7 +67,6 @@ var entries=document.querySelectorAll(".timeline--entry");
 var entWaypoints=[];
 
 entries.forEach(item=>{
-    console.log(item);
     entWaypoints.push(new Waypoint({
         element:item,
         handler: function(direction) {
